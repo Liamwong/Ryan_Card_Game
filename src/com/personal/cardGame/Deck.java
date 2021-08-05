@@ -26,6 +26,12 @@ public class Deck {
 //        }
     }
 
+    public Card drawCard(){
+        Card c = this.cards.get(this.cards.size() - 1);
+        this.cards.remove(this.cards.size() - 1);
+        return c;
+    }
+
     public void shuffle(){
         Random rand = new Random();
         ArrayList<Card> og = this.cards;
